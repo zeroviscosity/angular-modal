@@ -12,9 +12,9 @@ myApp.directive('angularModal', function() {
             function($scope, $rootScope, $element) {
                 $scope.defaults = {
                     title: 'Notification',
-                    class: '',
-                    alert: null,
                     message: '',
+                    alert: null,
+                    class: '',            
                     action: function() {  }
                 };
                 $scope.options = {};
@@ -27,15 +27,16 @@ myApp.directive('angularModal', function() {
                     $scope.options.class = ($scope.options.alert) ? 
                             'alert alert-' + $scope.options.alert : '';
                     //Display the modal
-                    $($element).find('.modal').modal('show');
+                    $($element).find('.modal').modal({
+                        backdrop: 'static',
+                        keyboard: false
+                    });
                 });
             }
         ],
         template: 
             '<div class="modal hide fade">' +
             '  <div class="modal-header">' +
-            '    <button type="button" class="close" data-dismiss="modal" ' +
-            '        aria-hidden="true">&times;</button>' +
             '    <h3>{{options.title}}</h3>' +
             '  </div>' +
             '  <div class="modal-body">' +
