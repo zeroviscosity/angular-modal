@@ -2,7 +2,7 @@
 
 ### An AngularJS Directive for controlling a Bootstrap Modal
 
-### Usage
+#### Usage
 
 1. Replace `myApp` with the name of your AngularJS application 
 2. Place the following include your base controller:
@@ -18,7 +18,7 @@
             alert: 'error'
         });
 
-### Modal Options
+#### Modal Options
 
 The directive provides five options, the defaults for wich are: 
 
@@ -43,7 +43,7 @@ Of these, the four that can be passed in are:
 
 The `class` option is set based on the value passed into `alert`.
     
-### Naming Options
+#### Naming Options
 
 To rename the directive, change `angularModal` to whatever you want it called,
 for example:
