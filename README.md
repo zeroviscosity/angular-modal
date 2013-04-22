@@ -4,13 +4,13 @@
 
 ### Usage
 
-* Replace `myApp` with the name of your AngularJS application 
-* Place the following include your base controller:
+1. Replace `myApp` with the name of your AngularJS application 
+2. Place the following include your base controller:
 
       <div angular-modal></div>
     
-* To activate the modal, broadcast a `showModal` from the $rootScope along with
-  modal options:
+3. To activate the modal, broadcast a `showModal` from the $rootScope along with
+   modal options:
 
       $rootScope.$broadcast('showModal', {
           title: 'Error', 
